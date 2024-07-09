@@ -21,7 +21,6 @@ body{
   padding: 30px 40px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  flex: 1;
 }
 .container .title{
   font-size: 25px;
@@ -41,12 +40,12 @@ body{
   display: block;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0 12px 0;
+  margin: 20px 0px 20px 0px;
   width: 100%;
 }
 form .user-details .input-box{
   margin-bottom: 15px;
-  width: calc(100% / 2 - 30px);
+  width: calc(100% / 2 - 20px);
   display: inline-block;
 }
 form .input-box span.details{
@@ -141,6 +140,7 @@ form .button{
   background: #d9d9d9;
   color:#F64B7D ;
   }
+/*The phone screen*/
 @media(max-width: 584px)
 {
   .container{
@@ -148,7 +148,6 @@ form .button{
   }
   .container .title{
     font-size: 20px;
-    text-align: center;
   }
   .user-details .input-box input{
     font-size: 14px;
@@ -162,7 +161,7 @@ form .button{
     width: 100%;
   }
   .content form .user-details{
-    max-height: 60vh;
+    max-height: 100%;
     overflow-y: scroll;
   }
   .user-details::-webkit-scrollbar{
@@ -173,8 +172,24 @@ form .button{
     margin-left: 0;  
     font-size: 15px;
   }
+  .container .title span{
+    margin-left: 0px;
+  }
+  .container .title img{
+    margin-left: 0px;
+  }
+
 }
-  @media(max-width: 459px){
+/*The Ipad screen*/
+@media(max-width: 1050px){
+  .user-details .input-box input{
+    font-size: 14px;
+  }
+  select { font-size: 14px;}
+  .subTitle hr{ margin-right: 35px;}
+}
+
+@media(max-width: 459px){
   .container .content .category{
     flex-direction: column;
   }
@@ -200,7 +215,7 @@ form .subdetails{
   width: 40px;
   height: 35px;
   float: left;
-  margin-left: 15px;
+ /* margin-left: 15px;*/
 }
 
 .container .title span{
@@ -208,7 +223,7 @@ form .subdetails{
 }
 
 .subTitle hr{
-  margin-right: 20px; 
+  /*margin-right: 35px; */
   height: 1.5px; 
   background-color: #FFC404; 
   border: none;
