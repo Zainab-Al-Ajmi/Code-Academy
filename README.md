@@ -1,3 +1,3 @@
 # Code-Academy
-This respiratory will contain my work in Code 
+This repository will contain my work in Code 
 academy (summer trainig)
