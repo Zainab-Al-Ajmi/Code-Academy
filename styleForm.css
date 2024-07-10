@@ -186,7 +186,7 @@ form .button{
     font-size: 14px;
   }
   select { font-size: 14px;}
-  .subTitle hr{ margin-right: 35px;}
+  /*.subTitle hr{ margin-right: 35px;}*/
 }
 
 @media(max-width: 459px){
