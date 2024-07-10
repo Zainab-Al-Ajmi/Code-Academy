@@ -189,12 +189,12 @@ form .button{
   /*.subTitle hr{ margin-right: 35px;}*/
 }
 
-@media(max-width: 459px){
+/*@media(max-width: 459px){
   .container .content .category{
     flex-direction: column;
   }
 
-}
+}*/
 
 form .subTitle{
   font-weight: 500;
