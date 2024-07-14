@@ -148,6 +148,9 @@ form .button{
   }
   .container .title{
     font-size: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: top;
   }
   .user-details .input-box input{
     font-size: 14px;
@@ -170,14 +173,19 @@ form .button{
   form .button input{
     width: 100%;
     margin-left: 0;  
-    font-size: 15px;
+    font-size: 14px;
   }
-  .container .title span{
-    margin-left: 0px;
-  }
+
   .container .title img{
-    margin-left: 0px;
-  }
+  width: 30px;
+  height: 25px;
+  margin-left: 0px;
+ /* margin-left: 15px;*/
+}
+
+.container .title span{
+  margin-left: 0px;
+}
 
 }
 /*The Ipad screen*/
