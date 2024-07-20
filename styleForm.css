@@ -122,18 +122,18 @@ form .button{
   margin: 10px 0;
 }
  form .button input{
-   height: 100%;
-   width: 54%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: #F64B7D;
-   margin-left: 23%;
+  height: 100%;
+  width: 54%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #F64B7D;
+  margin-left: 23%;
  }
  form .button input:hover{
   /* transform: scale(0.99); */
@@ -148,9 +148,6 @@ form .button{
   }
   .container .title{
     font-size: 20px;
-    display: grid;
-    grid-template-columns: auto 1fr; 
-    align-items: top;
   }
   .user-details .input-box input{
     font-size: 14px;
@@ -172,21 +169,15 @@ form .button{
   }
   form .button input{
     width: 100%;
-    margin-left: 0;  
-    font-size: 14px;
+    margin-left: 0;
+    font-size: 15px;
   }
-
+  .container .title span{
+    margin-left: 0px;
+  }
   .container .title img{
-  width: 30px;
-  height: 25px;
-  margin-left: 0px;
- /* margin-left: 15px;*/
-}
-
-.container .title span{
-  margin-left: 0px;
-}
-
+    margin-left: 0px;
+  }
 }
 /*The Ipad screen*/
 @media(max-width: 1050px){
@@ -206,7 +197,6 @@ form .button{
 
 form .subTitle{
   font-weight: 500;
-  margin-bottom: 30px;
   margin-top: 20px;
   width: 100%;
   font-size: 17px;
@@ -230,9 +220,100 @@ form .subdetails{
   margin-left: 20px;
 }
 
-.subTitle hr{
-  /*margin-right: 35px; */
+hr{
   height: 1.5px; 
   background-color: #FFC404; 
   border: none;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+
+.language-selector {
+  margin: 10px;
+}
+.language-selector-right {
+  float: right;
+}
+.language-selector-left {
+  float: left;
+}
+body[lang="ar"] {
+  direction: rtl;
+  text-align: right;
+}
+body[lang="en"] {
+  direction: ltr;
+  text-align: left;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title img {
+  max-height: 50px;
+  margin-right: 10px; /* Adjust space between image and title */
+}
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.language-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+.language-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.language-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.language-dropdown:hover .language-dropdown-content {
+  display: block;
+}
+.fade {
+  transition: opacity 0.3s;
+}
+.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+}
+.language-icon {
+  width: 40px;
+  height: 35px;
+}
+.title img {
+  max-height: 40px;
+  margin: 20px; 
+}
+.language-dropdown img {
+  width: 25px; 
+  height: 25px; 
+}
+
+body[lang="ar"] .container .title img{float: right;}
+body[lang="en"] .container .title img{float: left;}
+
+body[lang="ar"] form .button input{ margin-right: 23%;}
+
+body[lang="ar"] .language-dropdown-content {
+  left: 0; 
+  right: auto; 
+}
+
+body[lang="en"] .language-dropdown-content {
+  right: 0; 
+  left: auto; 
 }
