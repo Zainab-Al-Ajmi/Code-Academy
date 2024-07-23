@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="stylees.css">
+    <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+
+</head>
+<body>
+    <form id="course-form">
+        <label for="course-select">Choose a course:</label>
+        <select id="course-select">
+            <option value="">Select a course</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3 with levels</option>
+        </select>
+
+        <div id="course-levels" style="display:none;">
+            <p>Select levels:</p>
+            <input type="checkbox" id="level1" name="level1" value="Level 1">
+            <label for="level1">Level 1</label><br>
+            <input type="checkbox" id="level2" name="level2" value="Level 2">
+            <label for="level2">Level 2</label><br>
+            <input type="checkbox" id="level3" name="level3" value="Level 3">
+            <label for="level3">Level 3</label><br>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('course-select').addEventListener('change', function() {
+            var selectedCourse = this.value;
+            var courseLevelsDiv = document.getElementById('course-levels');
+        
+            // Assuming "course3" has levels
+            if (selectedCourse === 'course3') {
+                courseLevelsDiv.style.display = 'block';
+            } else {
+                courseLevelsDiv.style.display = 'none';
+            }
+        });        
+    </script>
+
+</body>
+</html>

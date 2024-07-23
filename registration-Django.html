@@ -1,20 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Code Academy Courses Registration Form</title>
-    <link rel="stylesheet" href="styleForm.css" />
+    <link rel="stylesheet" href="{% static 'CSS/styleForm.css' %}" type="text/css />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body lang="en">
     <div class="container">
         <div class="title">
-            <img src="CodeAcademyLogo.png" alt="the_logo" id="logo">
+            <img src="{% static 'IMG/CodeAcademyLogo.png' %}" alt="the_logo" id="logo">
             <span id="form-title" class="fade visible">Code Academy Courses Registration Form</span>
         </div>
         <div class="language-selector language-selector-right" id="language-selector">
             <div class="language-dropdown">
-                <img src="languageIcon.png" alt="Language" id="language-icon">
+                <img src="{% static 'IMG/languageIcon.png' %}" alt="Language" id="language-icon">
                 <div class="language-dropdown-content">
                     <a href="#" onclick="changeLanguage('en')">English</a>
                     <a href="#" onclick="changeLanguage('ar')">العربية</a>
@@ -23,6 +24,7 @@
         </div>
         <div class="content">
             <form method="post">
+                {% csrf_token %}
                 <div class="user-details">
                     <div class="subdetails">
                         <div class="subTitle fade visible" id="course-info">
